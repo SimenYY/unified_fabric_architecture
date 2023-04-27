@@ -3,11 +3,10 @@
 import json
 import importlib
 import os
-from common.singleton import singleton
+from common.singleton import Singleton
 
 
-@singleton
-class PluginManager:
+class PluginManager(metaclass=Singleton):
     # set static variable to store plugin path.
     __pluginPath = 'pass'
 
